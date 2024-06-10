@@ -1,0 +1,173 @@
+/* width */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+
+  border-radius: 1px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #0E4760;
+  border-radius: 5px;
+}
+
+.prim{background-color: #0E4760; color:#ffffff!important;}
+.bg{background-color:#0E4760;color:#ffffff!important;}
+.bg a{color:#ffffff!important;}
+h6{color:#ffffff!important;}
+.hidden {
+    display: none!important;
+}
+.dan{background-color: #fc4444!important;color:#ffffff;}
+.ht{height: 10vh!important;}
+
+.custom-loader {
+    width: 70px;
+    height: 26px;
+    background:#0E4760;
+    border-radius: 50px;
+    --c:radial-gradient(farthest-side,#000 92%,#0000);
+    --s:18px 18px;
+    -webkit-mask:
+      var(--c) left  4px top 50%,
+      var(--c) center,
+      var(--c) right 4px top 50%,
+      linear-gradient(#000 0 0);
+    -webkit-mask-composite:xor;
+    mask-composite:exclude;
+    -webkit-mask-repeat:no-repeat;
+    animation: cu1 1.5s infinite;
+  }
+  
+  @keyframes cu1 {
+    0%    {-webkit-mask-size:0    0  ,0    0  ,0    0  ,auto}
+    16.67%{-webkit-mask-size:var(--s),0    0  ,0    0  ,auto}
+    33.33%{-webkit-mask-size:var(--s),var(--s),0    0  ,auto}
+    50%   {-webkit-mask-size:var(--s),var(--s),var(--s),auto}
+    66.67%{-webkit-mask-size:0    0  ,var(--s),var(--s),auto}
+    83.33%{-webkit-mask-size:0    0  ,0    0  ,var(--s),auto}
+    100%  {-webkit-mask-size:0    0  ,0    0  ,0    0  ,auto}
+  }
+
+  .hts{height:40vh;}
+/* modal */
+/* The Modal (background) */
+.modal {
+  display: none; 
+  position: fixed; 
+  z-index: 100; 
+  left: 0;
+  top: 0;
+  width: 100%; 
+ 
+  overflow: auto; 
+ 
+}
+.modal-header {
+text-align: center;
+  color: #ffffff;
+}
+/* Modal Content/Box */
+.modal-content {
+ border-radius: 17px;
+
+box-shadow:  -14px 14px 21px #cccccc,
+             14px -14px 21px #f4f4f4;
+  background-color: #fefefe;
+  margin: 10% 0% 5% 55%; 
+  padding: 1em;
+ 
+  width: 40%; 
+}
+
+/* The Close Button */
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+/* float */
+.floating-container {
+  position: fixed;
+  width: 50px;
+  height: 50px;
+  bottom: 0;
+  right: 0;
+  margin: 35px 25px;
+}
+.floating-container:hover {
+  height: 300px;
+}
+.floating-container:hover .floating-button {
+  box-shadow: 0 10px 25px #05090a99;
+  -webkit-transform: translatey(5px);
+          transform: translatey(5px);
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+.floating-container:hover .element-container .float-element:nth-child(1) {
+  -webkit-animation: come-in 0.4s forwards 0.2s;
+          animation: come-in 0.4s forwards 0.2s;
+}
+.floating-container:hover .element-container .float-element:nth-child(2) {
+  -webkit-animation: come-in 0.4s forwards 0.4s;
+          animation: come-in 0.4s forwards 0.4s;
+}
+.floating-container:hover .element-container .float-element:nth-child(3) {
+  -webkit-animation: come-in 0.4s forwards 0.6s;
+          animation: come-in 0.4s forwards 0.6s;
+}
+.floating-container .floating-button {
+  position: absolute;
+  width: 65px;
+  height: 65px;
+  background: #0E4760;
+  bottom: 0;
+  border-radius: 50%;
+  left: 0;
+  right: 0;
+  margin: auto;
+  color: white;
+  line-height: 65px;
+  text-align: center;
+  font-size: 23px;
+  z-index: 100;
+  box-shadow: 0 10px 25px -5px #25211e99;
+  cursor: pointer;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+.floating-container .float-element {
+  position: relative;
+  display: block;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  margin: 15px auto;
+  color: white;
+  font-weight: 500;
+  text-align: center;
+  line-height: 50px;
+  z-index: 0;
+  opacity: 0;
+  -webkit-transform: translateY(100px);
+          transform: translateY(100px);
+}
+
+
+/* calendar */
+.vanilla-calendar-header{
+  background-color: #0E4760 !important;color: #f4f4f4 !important;
+}
