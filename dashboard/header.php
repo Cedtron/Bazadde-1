@@ -52,6 +52,14 @@ echo "<script> const roles = '" . $_SESSION['role'] . "'; </script>";
               </a>
             </li>
             <li class="sidebar-item">
+              <a class="sidebar-link" href="gallery.php" aria-expanded="false">
+                <span>
+                  <i class="bi bi-images"></i>
+                </span>
+                <span class="hide-menu">Gallery</span>
+              </a>
+            </li>
+            <li class="sidebar-item">
               <a class="sidebar-link" href="slider.php" aria-expanded="false">
                 <span>
                   <i class="bi bi-image"></i>

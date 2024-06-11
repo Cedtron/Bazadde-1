@@ -1,5 +1,5 @@
 <?php
- // Check if orders table exists
+ // Check if post table exists
 $result = $conn->query("SHOW TABLES LIKE 'posts'");
 if ($result->num_rows == 0) {
     // posts table doesn't exist, so create it
@@ -20,6 +20,29 @@ if ($result->num_rows == 0) {
 } else {
    // echo "Table posts already exists<br>";
 }
+
+
+
+ // Check if gallery table exists
+ $result = $conn->query("SHOW TABLES LIKE 'gallery'");
+ if ($result->num_rows == 0) {
+     // 'gallery' table doesn't exist, so create it
+     $sql = "CREATE TABLE gallery (
+         id INT AUTO_INCREMENT PRIMARY KEY,
+         title VARCHAR(255) NOT NULL,
+         img TEXT NOT NULL                
+     )";
+ 
+     // Execute the query to create the table
+     if ($conn->query($sql) === TRUE) {
+        //  echo "Table 'gallery' created successfully<br>";
+     } else {
+        //  echo "Error creating table: " . $conn->error . "<br>";
+     }
+ } else {
+    //  echo "Table 'gallery' already exists<br>";
+ }
+
 
 
 // Check if users table exists
